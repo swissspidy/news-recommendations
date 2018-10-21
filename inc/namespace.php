@@ -9,6 +9,7 @@ namespace NewsRecommendations;
 
 use ArrayIterator;
 use CachingIterator;
+use WP_Block_Type_Registry;
 use WP_Post;
 use WP_Term;
 
@@ -27,6 +28,8 @@ function bootstrap() {
 	add_action( 'widgets_init', __NAMESPACE__ . '\register_widget' );
 
 	add_filter( 'allowed_block_types', __NAMESPACE__ . '\filter_allowed_block_types', 10, 2 );
+
+	add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\limit_editor_assets_per_post_type', 8 );
 }
 
 /**
@@ -117,7 +120,7 @@ function register_block_types(): void {
 	}
 
 	register_block_type(
-		'news-recommendations/source',
+		'news-recommendations/recommendation',
 		[
 			'editor_script' => 'news-recommendations',
 			'editor_style'  => 'news-recommendations',
@@ -186,8 +189,17 @@ function register_editor_assets(): void {
  */
 function limit_editor_assets_per_post_type() {
 	global $post;
+
 	if ( POST_TYPE_NAME !== get_post_type( $post ) ) {
+		if ( ! WP_Block_Type_Registry::get_instance()->is_registered( 'news-recommendations/recommendation' ) ) {
+			return;
+		}
+
 		$block_type = unregister_block_type( 'news-recommendations/recommendation' );
+
+		if ( ! $block_type ) {
+			return;
+		}
 
 		// Re-register right after assets have been enqueued.
 		add_action(
