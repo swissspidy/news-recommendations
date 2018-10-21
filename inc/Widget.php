@@ -35,7 +35,7 @@ class Widget extends WP_Widget {
 	public function widget( $args, $instance ): void {
 		$query_args = [
 			'post_type'      => POST_TYPE_NAME,
-			'posts_per_page' => absint( $args['number_of_items'] ),
+			'posts_per_page' => absint( $instance['number_of_items']  ),
 		];
 
 		/**
