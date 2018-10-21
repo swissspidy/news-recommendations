@@ -1,0 +1,39 @@
+{
+  "name": "swissspidy/news-recommendations",
+  "type": "wordpress-plugin",
+  "description": "WordPress plugin to maintain a list of recommended links.",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "php": ">=7.2"
+  },
+  "require-dev": {
+    "fig-r/psr2r-sniffer": "^0.5.0",
+    "phpcompatibility/phpcompatibility-wp": "^1.0",
+    "wp-coding-standards/wpcs": "^1.0.0"
+  },
+  "suggest": {
+    "dealerdirect/phpcodesniffer-composer-installer": "Automatically adds this package's ruleset to the installed_paths option of PHP_CodeSniffer"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  },
+  "autoload": {
+    "files": [
+      "inc/namespace.php"
+    ],
+    "psr-4": {
+      "NewsRecommendations\\": "inc"
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "scripts": {
+    "format": "vendor/bin/phpcbf --report-summary --report-source .",
+    "lint": "vendor/bin/phpcs --report-summary --report-source ."
+  }
+}

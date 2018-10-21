@@ -1,0 +1,146 @@
+# Copyright (C) 2018 Pascal Birchler
+# This file is distributed under the same license as the News Recommendations plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: News Recommendations 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/news-recommendations\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2018-10-21T14:46:33+00:00\n"
+"PO-Revision-Date: 2018-10-21T14:46:33+00:00\n"
+"X-Generator: WP-CLI 2.0.1\n"
+"X-Domain: news-recommendations\n"
+
+#. Plugin Name of the plugin
+#: inc/Widget.php:18
+msgid "News Recommendations"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://github.com/swissspidy/news-recommendations/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Maintain a list of recommended links."
+msgstr ""
+
+#. Author of the plugin
+msgid "Pascal Birchler"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://pascalbirchler.com"
+msgstr ""
+
+#: inc/namespace.php:48
+msgctxt "Post Type General Name"
+msgid "Recommendations"
+msgstr ""
+
+#: inc/namespace.php:49
+msgctxt "Post Type Singular Name"
+msgid "Recommendation"
+msgstr ""
+
+#: inc/namespace.php:50
+msgid "Recommendations"
+msgstr ""
+
+#: inc/namespace.php:51
+msgid "All Recommendations"
+msgstr ""
+
+#: inc/namespace.php:52
+msgid "View Recommendation"
+msgstr ""
+
+#: inc/namespace.php:53
+msgid "Add New Recommendation"
+msgstr ""
+
+#: inc/namespace.php:54
+msgid "New Recommendation"
+msgstr ""
+
+#: inc/namespace.php:55
+msgid "Edit Recommendation"
+msgstr ""
+
+#: inc/namespace.php:56
+msgid "Update Recommendation"
+msgstr ""
+
+#: inc/namespace.php:57
+msgid "Search recommendations"
+msgstr ""
+
+#: inc/namespace.php:58
+msgid "No recommendations found"
+msgstr ""
+
+#: inc/namespace.php:59
+msgid "No recommendations found in Trash"
+msgstr ""
+
+#: inc/namespace.php:63
+msgid "Recommendation"
+msgstr ""
+
+#: inc/namespace.php:64
+msgid "Daily Recommendations"
+msgstr ""
+
+#: inc/namespace.php:92
+#: assets/js/src/editor/blocks/source/index.js:52
+msgid "Source"
+msgstr ""
+
+#: inc/namespace.php:103
+#: assets/js/src/editor/blocks/source/index.js:60
+msgid "URL"
+msgstr ""
+
+#: inc/Widget.php:92
+msgctxt "default widget title"
+msgid "Recommendations"
+msgstr ""
+
+#: inc/Widget.php:97
+msgid "Title"
+msgstr ""
+
+#: inc/Widget.php:109
+msgid "Number of items"
+msgstr ""
+
+#: inc/Widget.php:121
+msgid "Choose the number of recommendations you want to display"
+msgstr ""
+
+#: assets/js/src/editor/blocks/source/index.js:16
+msgctxt "block name"
+msgid "Recommendation "
+msgstr ""
+
+#: assets/js/src/editor/blocks/source/index.js:18
+msgid "Enter the information for this recommendation."
+msgstr ""
+
+#: assets/js/src/editor/blocks/source/index.js:25
+msgid "recommendation"
+msgstr ""
+
+#: assets/js/src/editor/blocks/source/index.js:26
+msgid "source"
+msgstr ""
+
+#: assets/js/src/editor/blocks/source/index.js:53
+msgid "Type the name of the originating publication, e.g. New York Times"
+msgstr ""
+
+#: assets/js/src/editor/blocks/source/index.js:61
+msgid "Enter the URL to the news story"
+msgstr ""
