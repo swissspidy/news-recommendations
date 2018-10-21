@@ -64,6 +64,7 @@ function register_post_type() {
 		'description'       => __( 'Daily Recommendations', 'news-recommendations' ),
 		'labels'            => $labels,
 		'supports'          => [ 'title', 'editor', 'custom-fields' ],
+		'menu_icon'         => 'dashicons-paperclip',
 		'hierarchical'      => false,
 		'public'            => false,
 		'show_in_rest'      => true,
