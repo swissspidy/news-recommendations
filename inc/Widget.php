@@ -118,7 +118,7 @@ class Widget extends WP_Widget {
 			/>
 		</p>
 		<p class="help">
-			<?php _e( 'Choose the number of recommendations you want to display', 'news-recommendations' ); ?>
+			<?php _e( 'Choose the number of recommendations you want to display.', 'news-recommendations' ); ?>
 		</p>
 		<?php
 

@@ -13,7 +13,7 @@ import { TextControl } from '@wordpress/components';
 import './editor.css';
 
 registerBlockType( 'news-recommendations/recommendation', {
-	title: _x( 'Recommendation ', 'block name', 'news-recommendations' ),
+	title: _x( 'Recommendation', 'block name', 'news-recommendations' ),
 
 	description: __( 'Enter the information for this recommendation.', 'news-recommendations' ),
 
