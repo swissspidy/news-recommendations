@@ -30,6 +30,8 @@ function bootstrap() {
 	add_filter( 'allowed_block_types', __NAMESPACE__ . '\filter_allowed_block_types', 10, 2 );
 
 	add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\limit_editor_assets_per_post_type', 8 );
+
+	add_filter( 'post_type_link', __NAMESPACE__ . '\filter_post_type_link', 10, 2 );
 }
 
 /**
@@ -90,7 +92,8 @@ function register_post_type() {
 function register_post_meta() {
 	\register_post_meta(
 		POST_TYPE_NAME,
-		'_recommendation_source', [
+		'_recommendation_source',
+		[
 			'show_in_rest'      => true,
 			'type'              => 'string',
 			'description'       => __( 'Source', 'news-recommendations' ),
@@ -101,7 +104,8 @@ function register_post_meta() {
 
 	\register_post_meta(
 		POST_TYPE_NAME,
-		'_recommendation_url', [
+		'_recommendation_url',
+		[
 			'show_in_rest'      => true,
 			'type'              => 'string',
 			'description'       => __( 'URL', 'news-recommendations' ),
@@ -232,4 +236,20 @@ function filter_allowed_block_types( $allowed_block_types, WP_Post $post ) {
 	}
 
 	return $allowed_block_types;
+}
+
+/**
+ * Filter post type permalink to point to recommended URL.
+ *
+ * @param string  $url  The post URL
+ * @param WP_Post $post The post object
+ *
+ * @return string The filtered permalink.
+ */
+function filter_post_type_link( $url, WP_Post $post ) {
+	if ( POST_TYPE_NAME === $post->post_type ) {
+		return get_post_meta( $post->ID, '_recommendation_url', true );
+	}
+
+	return $url;
 }
