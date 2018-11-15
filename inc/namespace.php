@@ -174,6 +174,15 @@ function register_editor_assets(): void {
 			'wp.i18n.setLocaleData( ' . wp_json_encode( $locale_data ) . ', "news-recommendations" );',
 			'before'
 		);
+	} elseif ( function_exists( 'wp_get_jed_locale_data' ) ) {
+		// Prepare Jed locale data.
+		$locale_data = wp_get_jed_locale_data( 'news-recommendations' );
+
+		wp_add_inline_script(
+			'news-recommendations',
+			'wp.i18n.setLocaleData( ' . wp_json_encode( $locale_data ) . ', "news-recommendations" );',
+			'before'
+		);
 	} else {
 		trigger_error( 'gutenberg_get_jed_locale_data() is missing, check for a change in Gutenberg.', E_USER_WARNING );
 	}
