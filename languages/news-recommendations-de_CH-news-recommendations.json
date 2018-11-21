@@ -1,0 +1,36 @@
+{
+   "domain": "messages",
+   "locale_data": {
+      "messages": {
+         "": {
+            "domain": "messages",
+            "plural_forms": "nplurals=2; plural=(n != 1);",
+            "lang": "de_CH"
+         },
+         "Source": [
+            "Quelle"
+         ],
+         "URL": [
+            "URL"
+         ],
+         "Enter the information for this recommendation.": [
+            "Gib die Informationen zu dieser Empfehlung ein."
+         ],
+         "recommendation": [
+            "empfehlung"
+         ],
+         "source": [
+            "quelle"
+         ],
+         "Type the name of the originating publication, e.g. New York Times": [
+            "Gib den Namen der Publikation an, z.B. New York Times"
+         ],
+         "Enter the URL to the news story": [
+            "Gib die URL zur News-Story ein"
+         ],
+         "block name\u0004Recommendation": [
+            "Empfehlung"
+         ]
+      }
+   }
+}
