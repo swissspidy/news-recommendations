@@ -132,7 +132,6 @@ function register_block_types(): void {
 	);
 }
 
-
 /**
  * Registers JavaScript and CSS for the block editor.
  */
