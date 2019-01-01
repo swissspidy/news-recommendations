@@ -62,7 +62,7 @@ registerBlockType( 'news-recommendations/recommendation', {
 					value={url}
 					type="url"
 					onChange={( newValue ) => {
-						setAttributes( { source: newValue } );
+						setAttributes( { url: newValue } );
 					}}
 				/>
 			</div>
