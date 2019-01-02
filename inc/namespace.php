@@ -153,7 +153,7 @@ function register_editor_assets(): void {
 			'wp-i18n',
 			'wp-plugins',
 		],
-		'20181021',
+		'20190102',
 		true
 	);
 
@@ -161,7 +161,7 @@ function register_editor_assets(): void {
 		'news-recommendations',
 		plugins_url( 'assets/css/editor.css', __DIR__ ),
 		[],
-		'20181021'
+		'20190102'
 	);
 
 	if ( \function_exists( 'wp_set_script_translations' ) ) {
