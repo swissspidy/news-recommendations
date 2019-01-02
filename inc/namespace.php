@@ -98,6 +98,7 @@ function register_post_meta() {
 			'type'              => 'string',
 			'description'       => __( 'Source', 'news-recommendations' ),
 			'sanitize_callback' => 'sanitize_text_field',
+			'auth_callback'     => '__return_true',
 			'single'            => true,
 		]
 	);
@@ -110,6 +111,7 @@ function register_post_meta() {
 			'type'              => 'string',
 			'description'       => __( 'URL', 'news-recommendations' ),
 			'sanitize_callback' => 'sanitize_text_field',
+			'auth_callback'     => '__return_true',
 			'single'            => true,
 		]
 	);
