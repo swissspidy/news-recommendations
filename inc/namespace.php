@@ -32,6 +32,8 @@ function bootstrap() {
 	add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\limit_editor_assets_per_post_type', 8 );
 
 	add_filter( 'post_type_link', __NAMESPACE__ . '\filter_post_type_link', 10, 2 );
+
+	add_filter( 'pll_get_post_types', __NAMESPACE__ . '\filter_pll_post_types', 10, 2 );
 }
 
 /**
@@ -84,6 +86,24 @@ function register_post_type() {
 	];
 
 	\register_post_type( POST_TYPE_NAME, $args );
+}
+
+/**
+ * Filters the list of post types available for translation.
+ *
+ * Adds support for translating the recommendation post type.
+ *
+ * @param array $post_types  List of post type names.
+ * @param bool  $is_settings true when displaying the list of custom post types in Polylang settings.
+ *
+ * @return array Filtered list of post type names.
+ */
+function filter_pll_post_types( $post_types, $is_settings ) {
+	if ( $is_settings ) {
+		$post_types[] = POST_TYPE_NAME;
+	}
+
+	return $post_types;
 }
 
 /**
