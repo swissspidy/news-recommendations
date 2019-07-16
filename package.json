@@ -22,7 +22,7 @@
     "@wordpress/blocks": "^6.0.4",
     "@wordpress/components": "^8.0.0",
     "@wordpress/element": "^2.1.8",
-    "@wordpress/i18n": "^3.1.0",
+    "@wordpress/i18n": "^3.5.0",
     "autoprefixer": "^9.4.3",
     "babel-loader": "^8.0.2",
     "cross-env": "^5.2.0",
