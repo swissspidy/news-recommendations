@@ -162,20 +162,16 @@ function register_editor_assets(): void {
 		return;
 	}
 
+	$script_deps_path    = \dirname( __DIR__ ) . '/assets/js/editor.deps.json';
+	$script_dependencies = file_exists( $script_deps_path )
+		? json_decode( file_get_contents( $script_deps_path ), false ) // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		: [];
+
 	wp_register_script(
 		'news-recommendations',
 		plugins_url( 'assets/js/editor.js', __DIR__ ),
-		[
-			'wp-blocks',
-			'wp-components',
-			'wp-data',
-			'wp-edit-post',
-			'wp-editor',
-			'wp-element',
-			'wp-i18n',
-			'wp-plugins',
-		],
-		'20190102',
+		$script_dependencies,
+		'20190717',
 		true
 	);
 
