@@ -20,7 +20,7 @@
     "@wordpress/babel-plugin-import-jsx-pragma": "^1.1.2",
     "@wordpress/babel-preset-default": "^3.0.1",
     "@wordpress/blocks": "^6.0.4",
-    "@wordpress/components": "^7.0.4",
+    "@wordpress/components": "^8.0.0",
     "@wordpress/element": "^2.1.8",
     "@wordpress/i18n": "^3.1.0",
     "autoprefixer": "^9.4.3",
