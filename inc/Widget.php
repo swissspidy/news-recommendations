@@ -35,7 +35,7 @@ class Widget extends WP_Widget {
 	public function widget( $args, $instance ): void {
 		$query_args = [
 			'post_type'      => POST_TYPE_NAME,
-			'posts_per_page' => absint( $instance['number_of_items']  ),
+			'posts_per_page' => absint( $instance['number_of_items'] ),
 		];
 
 		/**
@@ -134,8 +134,8 @@ class Widget extends WP_Widget {
 	public function update( $new_instance, $old_instance ): array {
 		$instance = [];
 
-		$instance['title'] = isset( $new_instance['title'] ) ? sanitize_text_field( $new_instance['title'] ) : '';
-		$instance['number_of_items']   = isset( $new_instance['number_of_items'] ) ? sanitize_text_field( $new_instance['number_of_items'] ) : '';
+		$instance['title']           = isset( $new_instance['title'] ) ? sanitize_text_field( $new_instance['title'] ) : '';
+		$instance['number_of_items'] = isset( $new_instance['number_of_items'] ) ? sanitize_text_field( $new_instance['number_of_items'] ) : '';
 
 		return $instance;
 	}
