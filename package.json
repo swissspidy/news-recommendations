@@ -19,7 +19,7 @@
     "@babel/preset-env": "^7.7.1",
     "@wordpress/babel-preset-default": "^4.6.2",
     "@wordpress/blocks": "^6.7.2",
-    "@wordpress/components": "^8.3.2",
+    "@wordpress/components": "^8.4.0",
     "@wordpress/element": "^2.8.2",
     "@wordpress/i18n": "^3.7.0",
     "@wordpress/scripts": "^5.1.0",
