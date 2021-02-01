@@ -21,7 +21,7 @@
     "@wordpress/blocks": "^6.25.2",
     "@wordpress/components": "^12.0.2",
     "@wordpress/element": "^2.19.0",
-    "@wordpress/i18n": "^3.17.0",
+    "@wordpress/i18n": "^3.17.1",
     "@wordpress/scripts": "^13.0.1",
     "autoprefixer": "^9.8.6",
     "babel-loader": "^8.2.2",
