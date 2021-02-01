@@ -20,7 +20,7 @@
     "@wordpress/babel-preset-default": "^5.0.0",
     "@wordpress/blocks": "^7.0.0",
     "@wordpress/components": "^12.0.3",
-    "@wordpress/element": "^2.19.0",
+    "@wordpress/element": "^2.19.1",
     "@wordpress/i18n": "^3.17.1",
     "@wordpress/scripts": "^13.0.1",
     "autoprefixer": "^9.8.6",
